@@ -12,10 +12,8 @@ const acct1 = process.env.ACCT1; //Test Account address
 const acct2 = process.env.ACCT2; //local Receiver Account 1
 
 //Private keys
-//const privateKey = process.env.TEST_KEY// Test Account 
+const privateKey = process.env.TEST_KEY// Test Account 
 //const privateKey = process.env.RECEIVER_KEY// Receiver acctount
-
-privateKey = '59c6995e998f97a5a0044966f0945389dc9e86dae88c7a8412f4603b6b78690d'  //hardhat fork account
 
 //signer account
 const signer = new ethers.Wallet(privateKey); //
