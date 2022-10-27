@@ -1,19 +1,9 @@
 var fs = require('fs');
 
-let d = new Date();
-
-
-
-
 const logger = async (text) => {
     console.log("logger: ", text );
 
-    let date = d.getDate();
-    let day = d.getUTCDay()
-    let hour = d.getUTCHours()
-    let minutes  = d.getUTCMinutes()
-
-text = "\n timestamp: "+date+" "+day+":"+hour+":"+minutes+" "+text+"\n";
+    text = "\n"+text+"\n";
 
 fs.appendFile("log.txt", text, err => {
     console.log("log entry: ", text )
