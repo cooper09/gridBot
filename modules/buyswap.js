@@ -3,16 +3,13 @@ const { ethers } = require('hardhat');
 const  {ChainId, Fetcher, WETH, Route, Trade, TokenAmount, TradeType, Percent } = require('@uniswap/sdk');
 
 /********************************************************************* */
-// utils
-const toBytes32 = text => ( ethers.utils.formatBytes32String(text));
-const toString = byte32 => ( ethers.utils.formatBytes32String(byte32));
-const toWei = ether => ( ethers.utils.parseEther(ether));
-const toEther = wei => ( ethers.utils.formatEther(wei).toString());
-const toRound = num => ( ethers.utils.toFixed(2));
+// utils generic ethers tools for formatting 
+const {toBytes32, toString, toWei, toEther, toRound, getTimestamp } = require('./utils');
 
 /********************************************************************* */
 const {provider, acct1, acct2, privateKey, signer, account } = require("./accts");
 const {logger} = require('./logger');
+const timestamp = getTimestamp();
 
 const buySwap = async ( orderId,  wallet, acct ) => {
     console.log("buySwap: ", acct, " orderId: ", orderId );
@@ -105,12 +102,14 @@ let slippage = toBytes32("0.050");
         await logger("BuySwap - orderId: "+ orderId);
 
         if(!orderId) {
-            currentNonce = currentNonce +1;
+            // cooper s - turn on for production
+            //currentNonce = currentNonce +1;
         }
 
         if(orderId) {
-            currentNonce = currentNonce +1;
             console.log("Buy/swap")
+            //currentNonce = currentNonce +1;  //add 1 for production only
+
         }
 
      //currentNonce = currentNonce +1
@@ -143,18 +142,12 @@ let slippage = toBytes32("0.050");
                 + "Navigate to whereever to see Buy Transaction: "  
                 + (await sendTxn).hash, "to see your Buy transaction")
 
-            /*    await logger(
-                    "logger = Buy Transaction is mined - " + '\n' 
-                + "Transaction Hash:", (await sendTxn).hash
-                + '\n' + "Block Number: " 
-                + (await reciept).blockNumber + '\n' 
-                + "Navigate to whereever to see Buy Transaction: "  
-                + (await sendTxn).hash, "to see your Buy transaction"
-                ) */
-                const log = await logger("logger - BuySwap - buy Transfer hash: "+ (await sendTxn).hash );
-
+                let timestamp = getTimestamp();
+                const log = await logger("logger "+timestamp+" - BuySwap - buy Transfer hash: "+ (await sendTxn).hash );
             } else {
-                console.log("Buy - Error submitting transaction: ", orderId)
+                console.log("Buy - Error submitting transaction: ", orderId);
+                let timestamp = getTimestamp();
+                await logger("logger "+timestamp+" Buy - Error submitting transaction: "+ orderId);
                 process.exit(0);
             }//end iffy
 
@@ -167,7 +160,8 @@ let slippage = toBytes32("0.050");
   
     } catch(e) {
         console.log("Buy Error: ", e.message);
-        await logger("Buy did not go thru...")
+        let timestamp = getTimestamp();
+        await logger(timestamap + "Buy did not go thru: ", e.message)
         process.exit(0);
     }
     return true;

@@ -7,7 +7,7 @@ const dotenv = require('dotenv').config();
 // set up prvider, primary and secondary addresses
 const {toBytes32, toString, toWei, toEther, toRound } = require('./modules/utils');
 const {provider, acct1, acct2, privateKey, signer, account } = require("./modules/accts");
-const {logger} = require('./logger');
+const {logger} = require('./logger.uptop.js');
 
 const {getPrice} = require('./modules/getPrice.js');
 const { check_orders } = require('./modules/checkorders');
@@ -71,6 +71,7 @@ const start = async (startPrice) => {
             //cooper s - check to see if the current price is above or below the current buy/sell grid
             if ((currentPrice < buyOrders[buyOrders.length - 1].order) || (currentPrice > sellOrders[sellOrders.length-1].order)) {
                 console.log("End of the line: ", currentPrice);
+                console.log("Start - finished Tx #: ", count,"\n")
                 process.exit(0)
             }//iffy
 

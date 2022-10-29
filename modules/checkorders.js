@@ -1,7 +1,7 @@
 
  const check_orders = async (price, orders ) => {
-    console.log("check buys - current price: ", price );
-    console.log("check buys - current orders:  ", orders );
+    console.log("check orders - current price: ", price );
+    console.log("check orders - current orders:  ", orders );
 
     for (var i=0 ; i < orders.length ; ++i) {
         //console.log ("check-buys - order price: ", orders[i].order)

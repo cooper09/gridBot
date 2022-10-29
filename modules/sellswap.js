@@ -10,7 +10,7 @@ const {provider, acct1, acct2, privateKey, signer, account } = require("./accts"
 /********************************************************************* */
 
 // utils generic ethers tools for formatting 
-const {toBytes32, toString, toWei, toEther, toRound } = require('./utils');
+const {toBytes32, toString, toWei, toEther, toRound, getTimestamp } = require('./utils');
 
 /********************************************************************* */
 
@@ -22,15 +22,8 @@ const {logger} = require('./logger');
 
 const sellSwap = async ( orderId, wallet, acct, provider ) => {
 
-    console.log ("TestSell 2 - TestSell.sellSwap orderId: ", orderId );
-    //console.log ("TestSell 2 - TestSell.sellSwap wallet: ", wallet.address );
-    //console.log ("TestSell 2 - TestSell.sellSwap acct: ", acct );
-    //console.log ("TestSell 2 - TestSell.sellSwap provider: ", provider._isProvider );
-
+    console.log ("Sellswap - TestSell.sellSwap orderId: ", orderId )
     const chainId = 1;
-
-    //console.log("current block: ",  await provider.getTransactionCount(account.address, 'latest'))
-    //console.log("current gas limit: ",  await provider.getBlock(account.address, 'latest').gaslimit )
 
     const dai = await Fetcher.fetchTokenData(chainId, daiAddr );
 
@@ -60,7 +53,6 @@ const sellSwap = async ( orderId, wallet, acct, provider ) => {
     console.log("SellSwap - For ", toEther(amountDaiIn), " Dai receive ", toEther(amountEthOut), " of ETH"  );
 
     let slippage = toBytes32("0.050");
-    //console.log("slippage: ", slippage )
     const slippageTolerance = new Percent(slippage, "10000");
 
     try {
@@ -83,6 +75,8 @@ const sellSwap = async ( orderId, wallet, acct, provider ) => {
                 console.log("amount approved...")
             })
 
+            const timestamp = getTimestamp();
+
         // Set up and execute actual swap 
         try {  
             console.log("SellSwap - amount to transfer: ", toEther(amountEthOut ));
@@ -100,16 +94,20 @@ const sellSwap = async ( orderId, wallet, acct, provider ) => {
                 nonce: currentNonce,
             })
             console.log("SellSwap - Sell Transfer hash: ",tx.hash )
-            const log = await logger("logger - SellSwap - Sell Transfer hash: "+ tx.hash );
+            const timestamp = getTimestamp();
+            const log = await logger("logger "+timestamp +" - SellSwap - Sell Transfer hash: "+ tx.hash );
             //return orderId;
         } catch (e) {
+            let timestamp = getTimestamp();
             console.log("SellSwap-Swap Transaction error: ", e.message );
+            await logger("logger "+timestamp+" Buy - Error submitting transaction: "+ e.message);
             process.exit(0)
         }
-    
-
     } catch(e) {
+        let timestamp = getTimestamp();
         console.log("SellSwap - Trade failed: ", e.message )
+        await logger("logger "+timestamp+"  - Error submitting transaction: "+ e.message);
+        
         process.exit(0)
     }
 
