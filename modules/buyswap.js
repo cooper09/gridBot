@@ -103,7 +103,7 @@ let slippage = toBytes32("0.050");
 
         if(!orderId) {
             // cooper s - turn on for production
-            //currentNonce = currentNonce +1;
+            currentNonce = currentNonce +1;
         }
 
         if(orderId) {
