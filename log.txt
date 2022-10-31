@@ -125,3 +125,45 @@ logger Sat Oct 29 2022 09:02:26 GMT-0400 (Eastern Daylight Time) - SellSwap - Se
 BuySwap - orderId: false
 
 logger Sat Oct 29 2022 09:02:41 GMT-0400 (Eastern Daylight Time) - BuySwap - buy Transfer hash: 0xda473d15e4fb7ab16c39f5310c7529047564b8a00d25e3976b6b5d962d41f064
+
+************************************************************************
+
+
+
+BuySwap - orderId: true
+
+logger Sat Oct 29 2022 12:33:21 GMT-0400 (Eastern Daylight Time) - BuySwap - buy Transfer hash: 0xea0105b24a68b658789316890b98e4a3aedc3e7f938a37367926e3ae91c66d69
+
+logger Sat Oct 29 2022 12:33:23 GMT-0400 (Eastern Daylight Time) - SellSwap - Sell Transfer hash: 0x63088469e9b050c43f63069fd824b08df646e1e303103866f01828cd4aeb4d91
+
+logger Sat Oct 29 2022 13:00:29 GMT-0400 (Eastern Daylight Time) - SellSwap - Sell Transfer hash: 0x63998ca5f5b35d52e90c18c608d75edbf0052fe1df1ec6dfd80b791de17b1714
+
+BuySwap - orderId: true
+
+logger Sat Oct 29 2022 13:00:47 GMT-0400 (Eastern Daylight Time) - BuySwap - buy Transfer hash: 0x76e366a85ce083edabb44cb0bf1f1ecc816067744621d6731de8864d0bab5383
+
+BuySwap - orderId: false
+
+logger Sat Oct 29 2022 13:01:10 GMT-0400 (Eastern Daylight Time) - BuySwap - buy Transfer hash: 0xcab140c6e8064de912b694dcd32402949eddbf9b04e4d1fcc8ee50e6d1b54775
+
+logger Sat Oct 29 2022 13:01:44 GMT-0400 (Eastern Daylight Time) - SellSwap - Sell Transfer hash: 0xb0408404a7928de8149a3ca2a1fb91a7de0a01955f69e5a04a1b2244d5470f9e
+
+BuySwap - orderId: true
+
+logger Sat Oct 29 2022 13:06:48 GMT-0400 (Eastern Daylight Time) - BuySwap - buy Transfer hash: 0x57f27541a773c1a2bacd017516d7754927c9687d7446a193916deda8998a0c27
+
+logger Sat Oct 29 2022 13:08:14 GMT-0400 (Eastern Daylight Time) - SellSwap - Sell Transfer hash: 0xaabf97ab6c642152ab321d5cd5f180def3e4cd495aabacf4eec115052fe50060
+
+logger Sat Oct 29 2022 15:56:05 GMT-0400 (Eastern Daylight Time) - SellSwap - Sell Transfer hash: 0xcf8ec848f454daef8f4dbb8d7b0859d98c393dfaff835f74e804ec6122ee9967
+
+BuySwap - orderId: false
+
+logger Sat Oct 29 2022 15:56:27 GMT-0400 (Eastern Daylight Time) - BuySwap - buy Transfer hash: 0xb30557542f56f3e8c902a377520c002ab12bfc0fefac10b8bc514b4733cd303e
+
+logger Sun Oct 30 2022 13:38:03 GMT-0400 (Eastern Daylight Time) - SellSwap - Sell Transfer hash: 0xfac75666e47c37daee34c894969b696416470c6f2a243ff2d3433752b3cc3378
+
+BuySwap - orderId: false
+
+logger Sun Oct 30 2022 13:38:28 GMT-0400 (Eastern Daylight Time) - BuySwap - buy Transfer hash: 0xb314b2a6e8a217b3a8835f30073a1b7da48470bbcf9a440524710759513f49ca
+**********************************************************************
+

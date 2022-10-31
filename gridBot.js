@@ -65,6 +65,8 @@ const start = async (startPrice) => {
     //closedOrders.length = 5
     //establish while loop
     while( closedOrders.length < buyOrders.length )  {
+        console.log("start while: ", closedOrders);
+        console.log("current order id: ", orderId);
         let currentPrice = Math.round(await getPrice()) ;
         console.log("\ncurrent price: ", currentPrice,"\n");
 

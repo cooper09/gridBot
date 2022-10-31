@@ -7,7 +7,7 @@ const toEther = wei => ( ethers.utils.formatEther(wei).toString());
 const toRound = num => ( ethers.utils.toFixed(2));
 
 const getTimestamp = () => {
-    console.log("getTimeStap");
+    console.log("getTimeStamp...");
     return new Date();
 }
 

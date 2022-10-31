@@ -8,6 +8,9 @@ node_modules/*
 
 logs/*
 logs
+log.txt
+./log.txt
+
 examples/*
 examples
 package-lock.json

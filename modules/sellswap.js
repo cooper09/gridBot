@@ -104,8 +104,9 @@ const sellSwap = async ( orderId, wallet, acct, provider ) => {
             process.exit(0)
         }
     } catch(e) {
-        let timestamp = getTimestamp();
+
         console.log("SellSwap - Trade failed: ", e.message )
+        let timestamp = getTimestamp();
         await logger("logger "+timestamp+"  - Error submitting transaction: "+ e.message);
         
         process.exit(0)
