@@ -2,9 +2,15 @@ npm_modules
 npm_modules/*
 node_modules
 node_modules/*
+
 .env
+.env.original
+
 logs/*
 logs
+log.txt
+./log.txt
+
 examples/*
 examples
 package-lock.json

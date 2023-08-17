@@ -1,0 +1,129 @@
+**************************************
+1
+Grid Test - Hardhat fork
+grid point: 1
+grid number: 5
+
+8:34 am
+eth price: 1508
+end: 1516
+
+Test (sender) start ETH: 1.01654181 - 0.99875861
+Test (sender) finish ETH: 0.99875861
+cost: $27
+
+Rcvr start ETH: 0.01525955 
+Rcvr finish ETH: 0.02525955  - 0.01525955
+total: 15.19
+
+Rcvr start Dai: 17.44064
+finish DAI: 28.80526 - 17.44064 = 11.36462
+
+gas fees: $0.44
+total: 26.55462
+
+profit: -$ 0.44
+**************************************
+2
+Grid Test - Hardhat fork
+grid point: 2
+grid number: 5
+
+9:30 am
+eth price: 1532
+end: 1545
+
+Test (sender) start ETH: 0.99875861 - 0.98148559
+Test (sender) finish ETH: 0.98148559
+cost: $26.63
+
+Rcvr start ETH:  0.02525955
+Rcvr finish ETH: 0.03525955
+total: $15.42 + 9.11
+
+Rcvr start Dai: 37.98301
+finish DAI: 28.80526 
+
+gas fees: $2.10
+total: $24.53
+
+profit: $ 2.10
+**************************************
+3
+Grid Test - Hardhat fork
+grid point: 2
+grid number: 10
+
+10:00 am
+eth price: 1545
+end: 1568
+
+Test (sender) start ETH: 0.98148559 - 0.91339281
+Test (sender) finish ETH: 0.91339281
+cost: $104.99
+
+Rcvr start ETH:  0.03525955
+Rcvr finish ETH: 0.07525955 - 0.03525955 = 
+total: $61.67 + 40.71
+
+Rcvr start Dai: 37.98301
+finish DAI: 78.691703018031726493 - 37.98301 = 40.708693018
+
+
+gas fees: $2.61
+total: $102.38
+
+profit: -$2.61
+**************************************
+4
+Grid Test - Hardhat fork
+grid point: 1
+grid number: 10
+
+5:45 pm - 9:55pm
+eth price: 1559
+end:  1569
+
+Test (sender) start ETH: 0.91339281 - 0.87961428
+Test (sender) finish ETH: 0.87961428 
+cost: $53.45
+
+Rcvr start ETH:  0.07525955
+Rcvr finish ETH: 0.09525955
+total: $31.63
+
+Rcvr start Dai: 78.691703018031726493
+finish DAI: 98.83181 - 78.691703 = 20.14
+
+gas fees: $
+total: $51.77
+
+profit: -$
+**************************************
+5
+Grid Test - Hardhat fork
+grid point: 1
+grid number: 10
+
+1:00 am
+eth price: 
+end:  
+
+Test (sender) start ETH: 0.87961428
+Test (sender) finish ETH: 
+cost: $
+
+Rcvr start ETH:  0.09525955
+Rcvr finish ETH: 
+total: $
+
+Rcvr start Dai: 98.83181
+finish DAI:
+
+gas fees: $
+total: $
+
+profit: -$
+**************************************
+
+
