@@ -1,9 +1,9 @@
-const { ethers } = require('hardhat');
+const { ethers } = require('ethers');
 const dotenv = require('dotenv').config(); 
 
 //const rpcURL = process.env.POLYGON_URL;
-const rpcURL = process.env.MAINNET_URL;
-//const rpcURL = process.env.LOCAL_URL;
+//const rpcURL = process.env.MAINNET_URL;
+const rpcURL = process.env.LOCAL_URL;
 
 const provider = new ethers.providers.JsonRpcProvider( rpcURL);
 
